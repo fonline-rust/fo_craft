@@ -1,0 +1,18 @@
+[package]
+name = "fo_craft"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[features]
+default = ["display", "parse"]
+display = []
+parse = []
+
+[dependencies]
+nom_prelude = { git = "https://github.com/fonline-rust/format_extras.git" }
+
+[dev-dependencies]
+fo_msg_format = { path = "https://github.com/fonline-rust/fo_msg_format.git", features = ["cp1251"] }
+fo_lst_format = { git = "https://github.com/fonline-rust/fo_lst_format.git" }
